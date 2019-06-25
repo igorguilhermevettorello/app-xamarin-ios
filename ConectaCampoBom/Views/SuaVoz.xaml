@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="ConectaCampoBom.Views.SuaVoz"
+    Title="Sua voz"
+    BackgroundImage="FundoDegradeApp.jpg">
+    <ContentPage.Content>
+        <ListView
+            x:Name="DemandasListView"
+            RowHeight="-1"
+            SeparatorVisibility="None" 
+            BackgroundColor="Transparent"
+            HasUnevenRows="true"
+            ItemSelected="OnMenuItemSelected"
+            ItemTapped="OnMenuItemTapped"
+		    ItemsSource="{Binding Itens}" 
+            Header="{Binding}" 
+            Footer="{Binding}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.View>
+                            <Frame 
+                                Margin="10,10,10,0" 
+                                Padding="5" 
+                                CornerRadius="0" 
+                                OutlineColor="Transparent" 
+                                HasShadow="False" 
+                                BackgroundColor="White">
+
+                                <FlexLayout Direction="Column">
+                                    <Label 
+                                        Text="{Binding DescricaoSolicitacao}"
+                                        TextColor="Green"
+                                        FontSize="11"
+                                        FontAttributes="Bold"                                           
+                                        HorizontalTextAlignment="Center"
+                                        HorizontalOptions="FillAndExpand" 
+                                        VerticalOptions="Center"/>
+                                    
+                                    <BoxView
+                                        HeightRequest="5"
+                                        BackgroundColor="Transparent" />
+
+                                    <Image 
+                                        Source="{Binding ImagemDemanda}"
+                                        Aspect="AspectFill"
+                                        HeightRequest="300"
+                                        HorizontalOptions="FillAndExpand"
+                                        VerticalOptions="Center"/>
+
+                                    <BoxView
+                                        HeightRequest="5"
+                                        BackgroundColor="Transparent" />
+
+                                    <Label 
+                                        Text="{Binding DescricaoEndereco}" 
+                                        TextColor="Blue"
+                                        FontSize="10"
+                                        FontAttributes="None"                                           
+                                        HorizontalTextAlignment="Center"
+                                        HorizontalOptions="FillAndExpand" 
+                                        VerticalOptions="Center"/>
+
+                                    <BoxView
+                                        HeightRequest="5"
+                                        BackgroundColor="Transparent" />
+
+                                    <Label 
+                                        Text="{Binding DescricaoMensagem}" 
+                                        TextColor="Blue"
+                                        FontSize="10"
+                                        FontAttributes="None"                                           
+                                        HorizontalTextAlignment="Center"
+                                        HorizontalOptions="FillAndExpand" 
+                                        VerticalOptions="Center"/>
+                                </FlexLayout>
+                            </Frame>
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+            <ListView.HeaderTemplate>
+                <DataTemplate>
+                    <StackLayout Margin="10,0,10,0">
+
+                        <BoxView 
+                            HeightRequest="10" 
+                            BackgroundColor="Transparent"/>
+
+                        <Button 
+                            Text="Adicionar"
+                            VerticalOptions="CenterAndExpand" 
+                            HorizontalOptions="FillAndExpand"
+                            BackgroundColor="White"
+                            TextColor="Green"
+                            Clicked="AcessarChamado"></Button>
+
+                        <BoxView 
+                            HeightRequest="0" 
+                            BackgroundColor="Transparent"/>
+
+                        <Label 
+                            Text="Histórico de demandas"
+                            TextColor="White"
+                            FontSize="14"
+                            FontAttributes="Bold"                                           
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="CenterAndExpand"/>
+
+                        <BoxView 
+                            HeightRequest="0" 
+                            BackgroundColor="Transparent"/>
+                        
+                    </StackLayout>
+                </DataTemplate>
+            </ListView.HeaderTemplate>
+
+            <ListView.FooterTemplate>
+                <DataTemplate>
+                    <!--<StackLayout>
+                        <Frame 
+                            Margin="10,10,10,0" 
+                            Padding="5" 
+                            CornerRadius="0" 
+                            OutlineColor="Transparent" 
+                            HasShadow="False" 
+                            BackgroundColor="White"
+                            IsVisible="{Binding Mostrar}">
+
+                            <FlexLayout Direction="Column">
+                                <Label 
+                                    Margin="5" 
+                                    HorizontalOptions="CenterAndExpand" 
+                                    Text="Não foi possível carregar as informações." 
+                                    TextColor="Blue" />
+
+                                <Label 
+                                    Margin="5" 
+                                    HorizontalOptions="CenterAndExpand" 
+                                    Text="Por favor tente novamente mais tarde." 
+                                    TextColor="Blue" />
+
+                                <BoxView 
+                                    HeightRequest="10" 
+                                    BackgroundColor="Transparent"/>
+
+                            </FlexLayout>
+                        </Frame>
+                    </StackLayout>-->
+                    <StackLayout>
+                        <BoxView 
+                            HeightRequest="10" 
+                            BackgroundColor="Transparent"/>
+                    </StackLayout>
+                </DataTemplate>
+            </ListView.FooterTemplate>
+        </ListView>
+
+
+        <!--<StackLayout>
+            <Button Text="Adicionar"
+                    VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"
+                    Clicked="AcessarChamado"></Button>
+            
+            <Label Text="Sua voz"
+                   TextColor="White"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+        </StackLayout>-->
+    </ContentPage.Content>
+</ContentPage>

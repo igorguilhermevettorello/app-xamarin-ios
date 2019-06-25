@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:util="clr-namespace:ConectaCampoBom.Util"
+    x:Class="ConectaCampoBom.Views.Noticia"
+    Title="Notícia"
+    BackgroundImage="FundoDegradeApp.jpg">
+    <ContentPage.Content>
+        <StackLayout>
+            <util:TransparentWebView 
+                x:Name="navegador" 
+                Source="http://www.macoratti.net" 
+                VerticalOptions="FillAndExpand"
+                Navigating="PagOnNavigating"
+                Navigated="PagOnNavigated"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

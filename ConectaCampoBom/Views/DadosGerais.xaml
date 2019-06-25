@@ -1,0 +1,329 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="ConectaCampoBom.Views.DadosGerais"
+    Title="Dados Gerais"
+    BackgroundImage="FundoDegradeApp.jpg">
+    <ContentPage.Content>
+        <ListView
+            x:Name="DadosGeraisListView"
+            RowHeight="-1"
+            SeparatorVisibility="None" 
+            BackgroundColor="Transparent"
+            HasUnevenRows="true"
+            ItemSelected="OnMenuItemSelected"
+            ItemTapped="OnMenuItemTapped"
+		    ItemsSource="{Binding Itens}" 
+            Header="{Binding}" 
+            Footer="{Binding}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.View>
+                            <Frame 
+                                Margin="10,10,10,0" 
+                                Padding="5" 
+                                CornerRadius="0" 
+                                OutlineColor="Transparent" 
+                                HasShadow="False"
+                                BackgroundColor="Transparent">
+                                <FlexLayout 
+                                    Direction="Column">
+
+                                    <!--<Label Text="Dados Gerais testes"
+                                           TextColor="White"
+                                           FontSize="11"
+                                           FontAttributes="Bold"                                           
+                                           VerticalOptions="CenterAndExpand"
+                                           HorizontalOptions="CenterAndExpand"/>
+
+                                    <BoxView 
+                                        HeightRequest="5" 
+                                        BackgroundColor="Transparent"/>
+
+                                    <Label Text="{Binding Descricao}" 
+                                           TextColor="White"
+                                           FontSize="10"
+                                           FontAttributes="None"                                           
+                                           VerticalOptions="CenterAndExpand"
+                                           HorizontalOptions="StartAndExpand"/>-->
+
+                                    <Label Text="O Município de Campo Bom situa-se no Vale do Rio dos Sinos, distante cerca de 50km de Porto Alegre (capital do Estado), com fácil acesso via ERS 239, no trajeto que liga a Região Metropolitana a Serra Gaúcha. Campo Bom éuma cidade que se destaca pelas ciclovias, suas festas populares e pelo seu povo alegre e trabalhador. Pioneira na exportação de calçado, sendo a principal fonte econômica da região. O Município também se destaca como maior produtor de mudas de hortaliças do Rio Grande do Sul. Campo Bom é uma cidade bonita, inovadora e diferenciada, que acredita muito na sua comunidade. Em Campo Bom, as diferentes manifestações culturais refletem a influência das várias etnias que povoaram esta região, principalmente a germânica. É esta cidade que queremos, com muito orgulho, mostrar para você!" 
+                                           TextColor="White"
+                                           FontSize="10"
+                                           FontAttributes="None"                                           
+                                           VerticalOptions="CenterAndExpand"
+                                           HorizontalOptions="StartAndExpand"/>
+
+                                    <BoxView HeightRequest="3" 
+	                                         BackgroundColor="Transparent"/>
+
+                                    <Label Text="Nome do município"
+	                                       TextColor="White"
+	                                       FontSize="11"
+	                                       FontAttributes="Bold"
+	                                       VerticalOptions="CenterAndExpand"
+	                                       HorizontalOptions="StartAndExpand"/>
+
+                                    <Label Text="Campo Bom" 
+	                                       TextColor="White"
+	                                       FontSize="10"
+	                                       FontAttributes="None"
+	                                       VerticalOptions="CenterAndExpand"
+	                                       HorizontalOptions="StartAndExpand"/>
+
+                                    <BoxView HeightRequest="3" 
+	                                         BackgroundColor="Transparent"/>
+
+                                    <Label Text="População total"
+	                                       TextColor="White"
+	                                       FontSize="11"
+	                                       FontAttributes="Bold"
+	                                       VerticalOptions="CenterAndExpand"
+	                                       HorizontalOptions="StartAndExpand"/>
+
+                                    <Label Text="64.553 habitantes" 
+	                                       TextColor="White"
+	                                       FontSize="10"
+	                                       FontAttributes="None"
+	                                       VerticalOptions="CenterAndExpand"
+	                                       HorizontalOptions="StartAndExpand"/>
+
+                                    <BoxView HeightRequest="3" 
+	                                         BackgroundColor="Transparent"/>
+
+                                    <Label Text="Área km²"
+	                                       TextColor="White"
+	                                       FontSize="11"
+	                                       FontAttributes="Bold"
+	                                       VerticalOptions="CenterAndExpand"
+	                                       HorizontalOptions="StartAndExpand"/>
+
+                                    <Label Text="60,3km²" 
+	                                       TextColor="White"
+	                                       FontSize="10"
+	                                       FontAttributes="None"
+	                                       VerticalOptions="CenterAndExpand"
+	                                       HorizontalOptions="StartAndExpand"/>
+
+                                    <BoxView HeightRequest="3" 
+	                                         BackgroundColor="Transparent"/>
+
+                                    <Label Text="Distância da Capital"
+	                                       TextColor="White"
+	                                       FontSize="11"
+	                                       FontAttributes="Bold"
+	                                       VerticalOptions="CenterAndExpand"
+	                                       HorizontalOptions="StartAndExpand"/>
+
+                                    <Label Text="50km" 
+	                                       TextColor="White"
+	                                       FontSize="10"
+	                                       FontAttributes="None"
+	                                       VerticalOptions="CenterAndExpand"
+	                                       HorizontalOptions="StartAndExpand"/>
+
+                                    <BoxView HeightRequest="3" 
+	                                         BackgroundColor="Transparent"/>
+
+                                    <Label Text="Área Urbana"
+	                                       TextColor="White"
+	                                       FontSize="11"
+	                                       FontAttributes="Bold"
+	                                       VerticalOptions="CenterAndExpand"
+	                                       HorizontalOptions="StartAndExpand"/>
+
+                                    <Label Text="24,5km²" 
+	                                       TextColor="White"
+	                                       FontSize="10"
+	                                       FontAttributes="None"
+	                                       VerticalOptions="CenterAndExpand"
+	                                       HorizontalOptions="StartAndExpand"/>
+
+                                    <BoxView HeightRequest="3" 
+	                                         BackgroundColor="Transparent"/>
+
+                                    <Label Text="Área Rural"
+	                                       TextColor="White"
+	                                       FontSize="11"
+	                                       FontAttributes="Bold"
+	                                       VerticalOptions="CenterAndExpand"
+	                                       HorizontalOptions="StartAndExpand"/>
+
+                                    <Label Text="35,5km²" 
+	                                       TextColor="White"
+	                                       FontSize="10"
+	                                       FontAttributes="None"
+	                                       VerticalOptions="CenterAndExpand"
+	                                       HorizontalOptions="StartAndExpand"/>
+
+                                    <BoxView HeightRequest="3" 
+	                                         BackgroundColor="Transparent"/>
+
+                                    <Label Text="Divisas"
+	                                       TextColor="White"
+	                                       FontSize="11"
+	                                       FontAttributes="Bold"
+	                                       VerticalOptions="CenterAndExpand"
+	                                       HorizontalOptions="StartAndExpand"/>
+
+                                    <Label Text="Ao Norte ficam as cidades de Dois Irmãos e Sapiranga; ao Sul, Novo Hamburgo; Leste, Sapiranga e Oeste, Novo Hamburgo." 
+	                                       TextColor="White"
+	                                       FontSize="10"
+	                                       FontAttributes="None"
+	                                       VerticalOptions="CenterAndExpand"
+	                                       HorizontalOptions="StartAndExpand"/>
+
+                                    <BoxView HeightRequest="3" 
+	                                         BackgroundColor="Transparent"/>
+
+                                    <Label Text="Localização"
+	                                       TextColor="White"
+	                                       FontSize="11"
+	                                       FontAttributes="Bold"
+	                                       VerticalOptions="CenterAndExpand"
+	                                       HorizontalOptions="StartAndExpand"/>
+
+                                    <Label Text="Microregião de Porto Alegre, Região Metropolitana." 
+	                                       TextColor="White"
+	                                       FontSize="10"
+	                                       FontAttributes="None"
+	                                       VerticalOptions="CenterAndExpand"
+	                                       HorizontalOptions="StartAndExpand"/>
+
+                                    <BoxView HeightRequest="3" 
+	                                         BackgroundColor="Transparent"/>
+
+                                    <Label Text="Clima"
+	                                       TextColor="White"
+	                                       FontSize="11"
+	                                       FontAttributes="Bold"
+	                                       VerticalOptions="CenterAndExpand"
+	                                       HorizontalOptions="StartAndExpand"/>
+
+                                    <Label Text="Mesotérmico Subtropical" 
+	                                       TextColor="White"
+	                                       FontSize="10"
+	                                       FontAttributes="None"
+	                                       VerticalOptions="CenterAndExpand"
+	                                       HorizontalOptions="StartAndExpand"/>
+
+                                    <BoxView HeightRequest="3" 
+	                                         BackgroundColor="Transparent"/>
+
+                                    <Label Text="Temperaturas"
+	                                       TextColor="White"
+	                                       FontSize="11"
+	                                       FontAttributes="Bold"
+	                                       VerticalOptions="CenterAndExpand"
+	                                       HorizontalOptions="StartAndExpand"/>
+
+                                    <Label Text="Média anual: 19,5º C" 
+	                                       TextColor="White"
+	                                       FontSize="10"
+	                                       FontAttributes="None"
+	                                       VerticalOptions="CenterAndExpand"
+	                                       HorizontalOptions="StartAndExpand"/>
+
+                                    <Label Text="Média Máxima anual de 38/40º C" 
+	                                       TextColor="White"
+	                                       FontSize="10"
+	                                       FontAttributes="None"
+	                                       VerticalOptions="CenterAndExpand"
+	                                       HorizontalOptions="StartAndExpand"/>
+
+                                    <Label Text="Média Mínima anual de 14,5º C" 
+	                                       TextColor="White"
+	                                       FontSize="10"
+	                                       FontAttributes="None"
+	                                       VerticalOptions="CenterAndExpand"
+	                                       HorizontalOptions="StartAndExpand"/>
+
+                                    <BoxView HeightRequest="3" 
+	                                         BackgroundColor="Transparent"/>
+
+                                    <Label Text="Altitude"
+	                                       TextColor="White"
+	                                       FontSize="11"
+	                                       FontAttributes="Bold"
+	                                       VerticalOptions="CenterAndExpand"
+	                                       HorizontalOptions="StartAndExpand"/>
+
+                                    <Label Text="Média de 20m acima do nível do mar" 
+	                                       TextColor="White"
+	                                       FontSize="10"
+	                                       FontAttributes="None"
+	                                       VerticalOptions="CenterAndExpand"
+	                                       HorizontalOptions="StartAndExpand"/>
+
+                                    <Label Text="Mínima de 3,8 sobre nível do Rio do Sinos" 
+	                                       TextColor="White"
+	                                       FontSize="10"
+	                                       FontAttributes="None"
+	                                       VerticalOptions="CenterAndExpand"
+	                                       HorizontalOptions="StartAndExpand"/>
+
+                                    <BoxView HeightRequest="3" 
+	                                         BackgroundColor="Transparent"/>
+
+                                    <Label Text="Latitude"
+	                                       TextColor="White"
+	                                       FontSize="11"
+	                                       FontAttributes="Bold"
+	                                       VerticalOptions="CenterAndExpand"
+	                                       HorizontalOptions="StartAndExpand"/>
+
+                                    <Label Text="29º 40'4'' - Sul" 
+	                                       TextColor="White"
+	                                       FontSize="10"
+	                                       FontAttributes="None"
+	                                       VerticalOptions="CenterAndExpand"
+	                                       HorizontalOptions="StartAndExpand"/>
+
+                                    <BoxView HeightRequest="3" 
+	                                         BackgroundColor="Transparent"/>
+
+                                    <Label Text="Longitude"
+	                                       TextColor="White"
+	                                       FontSize="11"
+	                                       FontAttributes="Bold"
+	                                       VerticalOptions="CenterAndExpand"
+	                                       HorizontalOptions="StartAndExpand"/>
+
+                                    <Label Text="51º 03'25'' - Oeste" 
+	                                       TextColor="White"
+	                                       FontSize="10"
+	                                       FontAttributes="None"
+	                                       VerticalOptions="CenterAndExpand"
+	                                       HorizontalOptions="StartAndExpand"/>
+                                </FlexLayout>
+                            </Frame>
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+            <ListView.HeaderTemplate>
+                <DataTemplate>
+                    <StackLayout Spacing="0" Padding="0,0,0,0">
+                        <BoxView 
+                            HeightRequest="0" 
+                            BackgroundColor="Transparent"/>
+
+                    </StackLayout>
+                </DataTemplate>
+            </ListView.HeaderTemplate>
+
+            <ListView.FooterTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <BoxView 
+                            HeightRequest="10" 
+                            BackgroundColor="Transparent"/>
+                    </StackLayout>
+                </DataTemplate>
+            </ListView.FooterTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>

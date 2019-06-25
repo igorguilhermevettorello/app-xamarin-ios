@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="ConectaCampoBom.Views.Pessoas"
+    Title="Pessoas">
+    <StackLayout>
+        <Button Text="Pessoas fisicas" Clicked="Button_Clicked" />
+        <!-- Place new controls here -->
+        <Label 
+            Text="Pessoas!" 
+            HorizontalOptions="Center" 
+            VerticalOptions="CenterAndExpand" />
+    </StackLayout>
+</ContentPage>

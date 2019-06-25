@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="ConectaCampoBom.Views.Empregos"
+    Title="Empregos"
+    BackgroundImage="FundoDegradeApp.jpg">
+    <ContentPage.Content>
+        <ListView
+            x:Name="ContatosListView"
+            RowHeight="-1"
+            SeparatorVisibility="None" 
+            BackgroundColor="Transparent"
+            HasUnevenRows="true"
+            ItemSelected="OnMenuItemSelected"
+            ItemTapped="OnMenuItemTapped"
+		    ItemsSource="{Binding Itens}" 
+            Header="{Binding}" 
+            Footer="{Binding}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.View>
+                            <Frame 
+                                Margin="10,10,10,0" 
+                                Padding="5" 
+                                CornerRadius="0" 
+                                OutlineColor="Transparent" 
+                                HasShadow="False" 
+                                BackgroundColor="White">
+                                
+                                <FlexLayout Direction="Column">
+                                    <Label Text="Vaga"
+                                           TextColor="Green"
+                                           FontSize="11"
+                                           FontAttributes="Bold"                                           
+                                           VerticalOptions="CenterAndExpand"
+                                           HorizontalOptions="CenterAndExpand"/>
+
+                                    <Label Text="{Binding Vaga}" 
+                                           TextColor="Blue"
+                                           FontSize="10"
+                                           FontAttributes="None"                                           
+                                           VerticalOptions="CenterAndExpand"
+                                           HorizontalOptions="StartAndExpand"/>
+
+                                    <BoxView
+                                        HeightRequest="5"
+                                        BackgroundColor="Transparent" />
+
+                                    <Label Text="Número de Vagas"
+                                           TextColor="Green"
+                                           FontSize="11"
+                                           FontAttributes="Bold"                                           
+                                           VerticalOptions="CenterAndExpand"
+                                           HorizontalOptions="CenterAndExpand"/>
+
+                                    <Label Text="{Binding Numero}" 
+                                           TextColor="Blue"
+                                           FontSize="10"
+                                           FontAttributes="None"                                           
+                                           VerticalOptions="CenterAndExpand"
+                                           HorizontalOptions="StartAndExpand"/>
+
+                                    <BoxView
+                                        HeightRequest="5"
+                                        BackgroundColor="Transparent" />
+
+                                    <Label Text="Descrição"
+                                           TextColor="Green"
+                                           FontSize="11"
+                                           FontAttributes="Bold"                                           
+                                           VerticalOptions="CenterAndExpand"
+                                           HorizontalOptions="CenterAndExpand"/>
+
+                                    <Label Text="{Binding DescricaoCargo}" 
+                                           TextColor="Blue"
+                                           FontSize="10"
+                                           FontAttributes="None"                                           
+                                           VerticalOptions="CenterAndExpand"
+                                           HorizontalOptions="StartAndExpand"/>
+                                </FlexLayout>
+                            </Frame>
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+            <ListView.HeaderTemplate>
+                <DataTemplate>
+                    <StackLayout Margin="0">
+
+                        <BoxView 
+                            HeightRequest="10" 
+                            BackgroundColor="White"/>
+
+                        <Label 
+                            Margin="0" 
+                            HorizontalOptions="CenterAndExpand" 
+                            Text="Vagas de emprego disponíveis no Sine." 
+                            TextColor="White"/>
+
+                        <Label 
+                            Margin="0" 
+                            HorizontalOptions="CenterAndExpand" 
+                            Text="Endereço: Avenida dos Estados, nº 900" 
+                            TextColor="White"/>
+
+                        <Label 
+                            Margin="0" 
+                            HorizontalOptions="CenterAndExpand" 
+                            Text="Horário: 8h às 11h - 12h às 15h" 
+                            TextColor="White"/>
+
+                        <Label 
+                            Margin="0" 
+                            HorizontalOptions="CenterAndExpand" 
+                            Text="Telefone: (51) 3597-1750" 
+                            TextColor="White"/>
+
+                        <Label 
+                            Margin="0" 
+                            HorizontalOptions="CenterAndExpand" 
+                            Text="E-mail: campobom@fgtas.rs.gov.br" 
+                            TextColor="White"/>
+
+                        <BoxView 
+                            HeightRequest="10" 
+                            BackgroundColor="Transparent"/>
+                        
+                        <BoxView 
+                            HeightRequest="1" 
+                            BackgroundColor="White"/>
+
+                    </StackLayout>
+                </DataTemplate>
+            </ListView.HeaderTemplate>
+
+            <ListView.FooterTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <Frame 
+                            Margin="10,10,10,0" 
+                            Padding="5" 
+                            CornerRadius="0" 
+                            OutlineColor="Transparent" 
+                            HasShadow="False" 
+                            BackgroundColor="White"
+                            IsVisible="{Binding Mostrar}">
+                            <Label 
+                                Margin="10" 
+                                HorizontalOptions="CenterAndExpand" 
+                                Text="Não há vagas cadastradas" 
+                                TextColor="Blue"/>
+                        </Frame>
+
+                        <BoxView 
+                            HeightRequest="10" 
+                            BackgroundColor="Transparent"/>
+                    </StackLayout>
+                </DataTemplate>
+            </ListView.FooterTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>

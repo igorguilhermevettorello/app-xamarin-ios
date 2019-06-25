@@ -1,0 +1,369 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="ConectaCampoBom.Views.Chamado"
+    xmlns:util="clr-namespace:ConectaCampoBom.Util"
+    Title="Nova demanda"
+    BackgroundImage="FundoDegradeApp.jpg">
+    <ContentPage.Content>
+        <ScrollView Padding="10">
+            <Frame 
+                Margin="0" 
+                Padding="0" 
+                CornerRadius="0" 
+                OutlineColor="Transparent" 
+                HasShadow="False" 
+                BackgroundColor="Transparent">
+                <FlexLayout Direction="Column">
+                    <StackLayout BackgroundColor="White">
+                        <Label 
+                            Text="Endereço"
+                            TextColor="Green"
+                            FontSize="11"
+                            Margin="5,5,0,0"
+                            FontAttributes="Bold"                                           
+                            HorizontalTextAlignment="Start"
+                            HorizontalOptions="FillAndExpand" 
+                            VerticalOptions="Center"/>
+
+                        <util:MyEntry 
+                            Placeholder="Digite seu endereço" 
+                            PlaceholderColor="LightGray"
+                            x:Name="txtEndereco"
+                            Text="{Binding Endereco}"
+                            TextColor="Green"
+                            BackgroundColor="White"
+                            HorizontalOptions="FillAndExpand" 
+                            VerticalOptions="Center"/>
+                        
+                        <!--<util:CustomEditor
+                            Placeholder="Digite seu endereço" 
+                            PlaceholderColor="LightGray"
+                            x:Name="txtEndereco"
+                            Text="{Binding Endereco}"
+                            TextColor="Green"
+                            BackgroundColor="White"
+                            HorizontalOptions="FillAndExpand" 
+                            VerticalOptions="Center" />-->
+                    </StackLayout>
+
+                    <BoxView 
+                        BackgroundColor="Transparent"
+                        HeightRequest="1" />
+                    
+                    <StackLayout BackgroundColor="White">
+                        <Label 
+                            Text="Número"
+                            TextColor="Green"
+                            FontSize="11"
+                            Margin="5,5,0,0"
+                            FontAttributes="Bold"                                           
+                            HorizontalTextAlignment="Start"
+                            HorizontalOptions="FillAndExpand" 
+                            VerticalOptions="Center"/>
+
+                        <util:MyEntry
+                            Placeholder="Digite seu número" 
+                            PlaceholderColor="LightGray"
+                            x:Name="txtNumero"
+                            Text="{Binding Numero}"
+                            TextColor="Green"
+                            BackgroundColor="White"
+                            HorizontalOptions="FillAndExpand" 
+                            VerticalOptions="Center" />
+                    </StackLayout>
+
+                    <BoxView 
+                        BackgroundColor="Transparent"
+                        HeightRequest="1" />
+
+                    <StackLayout BackgroundColor="White">
+                        <Label 
+                            Text="Complemento"
+                            TextColor="Green"
+                            FontSize="11"
+                            Margin="5,5,0,0"
+                            FontAttributes="Bold"                                           
+                            HorizontalTextAlignment="Start"
+                            HorizontalOptions="FillAndExpand" 
+                            VerticalOptions="Center"/>
+
+                        <util:MyEntry
+                            Placeholder="Digite o complemento" 
+                            PlaceholderColor="LightGray"
+                            x:Name="txtComplemento"
+                            Text="{Binding Complemento}"
+                            TextColor="Green"
+                            BackgroundColor="White"
+                            HorizontalOptions="FillAndExpand" 
+                            VerticalOptions="Center" />
+                    </StackLayout>
+
+                    <BoxView 
+                        BackgroundColor="Transparent"
+                        HeightRequest="1" />
+
+                    <StackLayout BackgroundColor="White">
+                        <Label 
+                            Text="Bairro"
+                            TextColor="Green"
+                            Margin="5,5,0,0"
+                            FontSize="11"
+                            FontAttributes="Bold"                                           
+                            HorizontalTextAlignment="Start"
+                            HorizontalOptions="FillAndExpand" 
+                            VerticalOptions="Center"/>
+
+                        <util:CustomEditor
+                            Placeholder="Selecione o bairro" 
+                            PlaceholderColor="LightGray"
+                            x:Name="txtBairro"
+                            Text="{Binding Bairro}"
+                            TextColor="Green"
+                            BackgroundColor="White"
+                            HorizontalOptions="FillAndExpand" 
+                            VerticalOptions="Center" 
+                            IsEnabled="False" />
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="abrirLista">
+                            </TapGestureRecognizer>
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+
+                    <BoxView 
+                        BackgroundColor="Transparent"
+                        HeightRequest="20" />
+                    
+                    <StackLayout BackgroundColor="White">
+                        <Label 
+                            Text="Titulo"
+                            TextColor="Green"
+                            FontSize="11"
+                            Margin="5,5,0,0"
+                            FontAttributes="Bold"                                           
+                            HorizontalTextAlignment="Start"
+                            HorizontalOptions="FillAndExpand" 
+                            VerticalOptions="Center"/>
+
+                        <util:CustomEditor
+                            Placeholder="Digite o título" 
+                            PlaceholderColor="LightGray"
+                            x:Name="txtTitulo"
+                            Text="{Binding Titulo}"
+                            TextColor="Green"
+                            BackgroundColor="White"
+                            HorizontalOptions="FillAndExpand" 
+                            VerticalOptions="Center" />
+                    </StackLayout>
+
+                    <BoxView 
+                        BackgroundColor="Transparent"
+                        HeightRequest="1" />
+                    
+                    <StackLayout BackgroundColor="White">
+                        <Label 
+                            Text="Descrição"
+                            TextColor="Green"
+                            FontSize="11"
+                            Margin="5,5,0,0"
+                            FontAttributes="Bold"                                           
+                            HorizontalTextAlignment="Start"
+                            HorizontalOptions="FillAndExpand" 
+                            VerticalOptions="Center"/>
+
+                        <util:CustomEditor
+                            Placeholder="Descrição" 
+                            PlaceholderColor="LightGray"
+                            x:Name="txtDescricao"
+                            Text="{Binding Descricao}"
+                            TextColor="Green"
+                            BackgroundColor="White"
+                            HorizontalOptions="FillAndExpand" 
+                            VerticalOptions="Center" />
+                    </StackLayout>
+
+                    <BoxView 
+                        BackgroundColor="Transparent"
+                        HeightRequest="20" />
+
+                    <StackLayout BackgroundColor="White">
+                        <Label 
+                            Text="Nome"
+                            TextColor="Green"
+                            FontSize="11"
+                            Margin="5,5,0,0"
+                            FontAttributes="Bold"                                           
+                            HorizontalTextAlignment="Start"
+                            HorizontalOptions="FillAndExpand" 
+                            VerticalOptions="Center"/>
+
+                        <util:CustomEditor
+                            Placeholder="Digite seu nome" 
+                            PlaceholderColor="LightGray"
+                            x:Name="txtNome"
+                            Text="{Binding Nome}"
+                            TextColor="Green"
+                            BackgroundColor="White"
+                            HorizontalOptions="FillAndExpand" 
+                            VerticalOptions="Center" />
+                    </StackLayout>
+
+                    <BoxView 
+                        BackgroundColor="Transparent"
+                        HeightRequest="1" />
+                    
+                    <StackLayout BackgroundColor="White">
+                        <Label 
+                            Text="Email"
+                            TextColor="Green"
+                            FontSize="11"
+                            Margin="5,5,0,0"
+                            FontAttributes="Bold"                                           
+                            HorizontalTextAlignment="Start"
+                            HorizontalOptions="FillAndExpand" 
+                            VerticalOptions="Center"/>
+
+                        <util:CustomEditor
+                            Placeholder="Digite seu e-mail" 
+                            PlaceholderColor="LightGray"
+                            x:Name="txtEmail"
+                            Text="{Binding Email}"
+                            TextColor="Green"
+                            BackgroundColor="White"
+                            HorizontalOptions="FillAndExpand" 
+                            VerticalOptions="Center" />
+                    </StackLayout>
+
+                    <BoxView 
+                        BackgroundColor="Transparent"
+                        HeightRequest="1" />
+
+                    <StackLayout BackgroundColor="White">
+                        <Label 
+                            Text="Celular"
+                            TextColor="Green"
+                            FontSize="11"
+                            Margin="5,5,0,0"
+                            FontAttributes="Bold"                                           
+                            HorizontalTextAlignment="Start"
+                            HorizontalOptions="FillAndExpand" 
+                            VerticalOptions="Center"/>
+
+                        <util:CustomEditor
+                            Placeholder="Digite seu celular" 
+                            PlaceholderColor="LightGray"
+                            x:Name="txtCelular"
+                            Text="{Binding Celular}"
+                            TextColor="Green"
+                            BackgroundColor="White"
+                            HorizontalOptions="FillAndExpand" 
+                            VerticalOptions="Center"
+                            Keyboard="Telephone"/>
+                    </StackLayout>
+
+                    <BoxView 
+                        BackgroundColor="Transparent"
+                        HeightRequest="1" />
+                    
+                    <StackLayout BackgroundColor="White">
+                        <Label 
+                            Text="Whatsapp"
+                            TextColor="Green"
+                            FontSize="11"
+                            Margin="5,5,0,0"
+                            FontAttributes="Bold"                                           
+                            HorizontalTextAlignment="Start"
+                            HorizontalOptions="FillAndExpand" 
+                            VerticalOptions="Center"/>
+
+                        <util:CustomEditor
+                            Placeholder="Digite seu whatsapp" 
+                            PlaceholderColor="LightGray"
+                            x:Name="txtWhatsapp"
+                            Text="{Binding Whatsapp}"
+                            TextColor="Green"
+                            BackgroundColor="White"
+                            HorizontalOptions="FillAndExpand" 
+                            VerticalOptions="Center"
+                            Keyboard="Telephone"/>
+                    </StackLayout>
+
+                    <BoxView 
+                        BackgroundColor="Transparent"
+                        HeightRequest="20" />
+                    
+                    <StackLayout BackgroundColor="White" Padding="5">
+
+                        <Label 
+                            Text="Imagem"
+                            TextColor="Green"
+                            FontSize="11"
+                            Margin="5,5,0,0"
+                            FontAttributes="Bold"                                           
+                            HorizontalTextAlignment="Start"
+                            HorizontalOptions="FillAndExpand" 
+                            VerticalOptions="Center"/>
+
+                        <Image x:Name="imgFoto"/>
+
+                        <BoxView 
+                            BackgroundColor="Transparent"
+                            HeightRequest="1" />
+
+                        <Button 
+                            Text="Tirar Foto" 
+                            Clicked="TirarFoto"
+                            HorizontalOptions="FillAndExpand" 
+                            VerticalOptions="Center"
+                            BorderColor="Green"
+                            BackgroundColor="Transparent"
+                            BorderWidth="1"
+                            TextColor="Green"/>
+                        
+                        <Button 
+                            x:Name="btnSelecionarImagem" 
+                            Text="Selecionar uma imagem" 
+                            Clicked="SelecionarImagem"
+                            HorizontalOptions="FillAndExpand" 
+                            VerticalOptions="Center"
+                            BorderColor="Green"
+                            BackgroundColor="Transparent"
+                            BorderWidth="1"
+                            TextColor="Green"/>
+                    </StackLayout>
+
+                    <BoxView 
+                        BackgroundColor="Transparent"
+                        HeightRequest="10" />
+
+                    <Button 
+                        Text="Enviar"
+                        VerticalOptions="CenterAndExpand" 
+                        HorizontalOptions="FillAndExpand"
+                        BackgroundColor="White"
+                        TextColor="Green"
+                        Clicked="EnviarChamado"></Button>
+
+                </FlexLayout>
+            </Frame>
+
+            <!--<Button 
+                Text="Adicionar"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"
+                Clicked="GetSerial"></Button>-->
+
+            <!--<Button 
+                Text="tirar foto"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"
+                Clicked="TirarFoto"></Button>-->
+
+            <!--<Label Text="Nova demanda"
+                   TextColor="White"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />-->
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

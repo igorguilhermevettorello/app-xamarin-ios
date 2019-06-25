@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="ConectaCampoBom.Views.Principal"
+    Title="Principal"
+    BackgroundImage="menu_fundo.jpg">
+
+    
+    
+    <Grid Padding="0" RowSpacing="0" ColumnSpacing="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        
+        
+        <StackLayout Grid.Row="0" Grid.ColumnSpan="2">
+            <Image 
+                Source="menu_conecta.png"
+                WidthRequest="300" 
+                HeightRequest="100"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="CenterAndExpand">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnTapGestureRecognizerTapped"  />
+                </Image.GestureRecognizers>
+            </Image>
+        </StackLayout>
+
+        <StackLayout Grid.Row="1" Grid.Column="0">
+            <Image 
+                Source="menu_noticia.png"
+                WidthRequest="80" 
+                HeightRequest="80"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="CenterAndExpand">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnTapGestureTappedMenuNoticias"  />
+                </Image.GestureRecognizers>
+            </Image>
+        </StackLayout>
+
+        <StackLayout Grid.Row="1" Grid.Column="1">
+            <Image 
+                Source="menu_sua_voz.png"
+                WidthRequest="80" 
+                HeightRequest="80"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="CenterAndExpand">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnTapGestureTappedMenuSuaVoz"  />
+                </Image.GestureRecognizers>
+            </Image>
+        </StackLayout>
+
+        <StackLayout Grid.Row="2" Grid.Column="0">
+            <Image 
+                Source="menu_deu_certo.png"
+                WidthRequest="80" 
+                HeightRequest="80"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="CenterAndExpand">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnTapGestureTappedMenuDeuCerto"  />
+                </Image.GestureRecognizers>
+            </Image>
+        </StackLayout>
+
+        <StackLayout Grid.Row="2" Grid.Column="1">
+            <Image 
+                Source="menu_empregos.png"
+                WidthRequest="80" 
+                HeightRequest="80"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="CenterAndExpand">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnTapGestureTappedMenuEmpregos"  />
+                </Image.GestureRecognizers>
+            </Image>
+        </StackLayout>
+
+        <StackLayout Grid.Row="3" Grid.Column="0">
+            <Image 
+                Source="menu_prefeitura.png"
+                WidthRequest="80" 
+                HeightRequest="80"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="CenterAndExpand">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnTapGestureTappedMenuPrefeitura"  />
+                </Image.GestureRecognizers>
+            </Image>
+        </StackLayout>
+
+        <StackLayout Grid.Row="3" Grid.Column="1">
+            <Image 
+                Source="menu_cidade.png"
+                WidthRequest="80" 
+                HeightRequest="80"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="CenterAndExpand">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnTapGestureTappedMenuCidade"  />
+                </Image.GestureRecognizers>
+            </Image>
+        </StackLayout>
+        
+        <StackLayout Grid.Row="4" Grid.ColumnSpan="2">
+            <Image 
+                Source="campo_bom_logo_2017.png"
+                WidthRequest="30" 
+                HeightRequest="30"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="CenterAndExpand">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnTapGestureTappedFacebook"  />
+                </Image.GestureRecognizers>
+            </Image>
+        </StackLayout>
+    </Grid>
+</ContentPage>
