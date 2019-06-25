@@ -33,8 +33,7 @@
     <key>CFBundleName</key>
     <string>ConectaCampoBom</string>
     <key>XSAppIconAssets</key>
-    <string>Assets.xcassets/AppIcon.appiconset</string>
-	
+    <string>Assets.xcassets/AppIcon.appiconset</string>	
 	<key>NSCameraUsageDescription</key>
 	<string>This app needs access to the camera to take photos.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
@@ -43,5 +42,20 @@
 	<string>This app needs access to microphone.</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>This app needs access to the photo gallery.</string>
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSAllowsArbitraryLoads</key>
+        <true/>
+        <key>NSExceptionDomains</key>
+        <dict>
+            <key>yourdomain.com</key>
+            <dict>
+                <key>NSIncludesSubdomains</key>
+                <true/>
+                <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
+                <false/>
+            </dict>
+        </dict>
+    </dict>
 </dict>
 </plist>

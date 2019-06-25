@@ -19,14 +19,14 @@ namespace ConectaCampoBom.Views
 
         public void OnTapGestureRecognizerTapped(object sender, EventArgs args) { }
 
-        public async void OnTapGestureTappedMenuPrefeitura(object sender, EventArgs args)
+        public void OnTapGestureTappedMenuPrefeitura(object sender, EventArgs args)
         {
             try
             {
                 var modalPage = new Load();
-                await Navigation.PushModalAsync(modalPage);
-                await Navigation.PushAsync(new Prefeitura());
-                await Navigation.PopModalAsync();
+                Navigation.PushModalAsync(modalPage);
+                Navigation.PushAsync(new Prefeitura());
+                Navigation.PopModalAsync();
             }
             catch (Exception ex)
             {
@@ -36,14 +36,14 @@ namespace ConectaCampoBom.Views
             }
         }
 
-        public async void OnTapGestureTappedMenuCidade(object sender, EventArgs args)
+        public void OnTapGestureTappedMenuCidade(object sender, EventArgs args)
         {
             try
             {
                 var modalPage = new Load();
-                await Navigation.PushModalAsync(modalPage);
-                await Navigation.PushAsync(new Cidade());
-                await Navigation.PopModalAsync();
+                Navigation.PushModalAsync(modalPage);
+                Navigation.PushAsync(new Cidade());
+                Navigation.PopModalAsync();
             }
             catch (Exception ex)
             {
@@ -53,14 +53,14 @@ namespace ConectaCampoBom.Views
             }
         }
 
-        public async void OnTapGestureTappedMenuEmpregos(object sender, EventArgs args)
+        public void OnTapGestureTappedMenuEmpregos(object sender, EventArgs args)
         {
             try
             {
                 var modalPage = new Load();
-                await Navigation.PushModalAsync(modalPage);
-                await Navigation.PushAsync(new Empregos());
-                await Navigation.PopModalAsync();
+                Navigation.PushModalAsync(modalPage);
+                Navigation.PushAsync(new Empregos());
+                Navigation.PopModalAsync();
             }
             catch (Exception ex)
             {
