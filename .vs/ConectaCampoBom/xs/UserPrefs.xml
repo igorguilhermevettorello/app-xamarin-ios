@@ -1,8 +1,9 @@
-﻿<Properties StartupConfiguration="{57C89A85-B3CE-4064-901D-E11B3CEBDC6E}|Default">
+﻿<Properties StartupConfiguration="{C9C83802-BEE8-4D2D-9B9B-1E429D42D9BE}|Default">
   <MonoDevelop.Ide.ItemProperties.ConectaCampoBom.Android PreferredExecutionTarget="Android.android_4_4" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="ConectaCampoBom/Views/Principal.xaml.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ConectaCampoBom/Views/Prefeitura.xaml.cs">
     <Files>
-      <File FileName="ConectaCampoBom/Views/Principal.xaml.cs" Line="75" Column="16" />
+      <File FileName="ConectaCampoBom/Views/Principal.xaml.cs" Line="116" Column="33" />
+      <File FileName="ConectaCampoBom/Views/Prefeitura.xaml.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -10,9 +11,10 @@
           <Node name="ConectaCampoBom" expanded="True">
             <Node name="ConectaCampoBom" expanded="True">
               <Node name="Views" expanded="True">
-                <Node name="Principal.xaml" expanded="True">
-                  <Node name="Principal.xaml.cs" selected="True" />
+                <Node name="Prefeitura.xaml" expanded="True">
+                  <Node name="Prefeitura.xaml.cs" selected="True" />
                 </Node>
+                <Node name="Principal.xaml" expanded="True" />
               </Node>
             </Node>
           </Node>
@@ -21,6 +23,7 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.ConectaCampoBom.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.AB32F20D-8D27-4AC4-86C5-F117172AF5B0" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

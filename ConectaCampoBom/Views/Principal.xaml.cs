@@ -70,14 +70,14 @@ namespace ConectaCampoBom.Views
             }
         }
 
-        public async void OnTapGestureTappedMenuNoticias(object sender, EventArgs args)
+        public void OnTapGestureTappedMenuNoticias(object sender, EventArgs args)
         {
             try
             {
                 var modalPage = new Load();
-                await Navigation.PushModalAsync(modalPage);
-                await Navigation.PushAsync(new Noticias());
-                await Navigation.PopModalAsync();
+                Navigation.PushModalAsync(modalPage);
+                Navigation.PushAsync(new Noticias());
+                Navigation.PopModalAsync();
             }
             catch (Exception ex)
             {
@@ -87,14 +87,14 @@ namespace ConectaCampoBom.Views
             }
         }
 
-        public async void OnTapGestureTappedMenuDeuCerto(object sender, EventArgs args)
+        public void OnTapGestureTappedMenuDeuCerto(object sender, EventArgs args)
         {
             try
             {
                 var modalPage = new Load();
-                await Navigation.PushModalAsync(modalPage);
-                await Navigation.PushAsync(new DeuCerto());
-                await Navigation.PopModalAsync();
+                Navigation.PushModalAsync(modalPage);
+                Navigation.PushAsync(new DeuCerto());
+                Navigation.PopModalAsync();
             }
             catch (Exception ex)
             {
@@ -104,15 +104,14 @@ namespace ConectaCampoBom.Views
             }
         }
 
-        public async void OnTapGestureTappedMenuSuaVoz(object sender, EventArgs args)
+        public void OnTapGestureTappedMenuSuaVoz(object sender, EventArgs args)
         {
             try
             {
                 var modalPage = new Load();
-                await Navigation.PushModalAsync(modalPage);
-                await Navigation.PushAsync(new SuaVoz());
-                //await Navigation.PushAsync(new Chamado());
-                await Navigation.PopModalAsync();
+                Navigation.PushModalAsync(modalPage);
+                Navigation.PushAsync(new SuaVoz());
+                Navigation.PopModalAsync();
             }
             catch (Exception ex)
             {
@@ -122,7 +121,7 @@ namespace ConectaCampoBom.Views
             }
         }
 
-        public async void OnTapGestureTappedFacebook(object sender, EventArgs args)
+        public void OnTapGestureTappedFacebook(object sender, EventArgs args)
         {
             Device.OpenUri(new Uri("http://facebook.com.br/prefeituradecampobom"));
         }

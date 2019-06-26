@@ -181,12 +181,10 @@
     <BundleResource Include="Resources\menu_sua_voz.png" />
     <BundleResource Include="Resources\menu_titulo.png" />
     <BundleResource Include="Resources\sobre.jpg" />
+    <BundleResource Include="Resources\FundoDegradeApp.jpg" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\page_prefeitura.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\FundoDegradeApp.jpg" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\page_cidade.png" />
